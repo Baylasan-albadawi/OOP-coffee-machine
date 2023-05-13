@@ -20,8 +20,8 @@ public class  Coffee {
     private int waterlevel;
     private Grinder grindlevel;
     private int beans;
-    private Beans b;
-    private Water w;
+    private Beans b=new Beans();
+    private Water w= new Water();
     private String coffeetype;
     private int cupscounter;
     private logger logger;
