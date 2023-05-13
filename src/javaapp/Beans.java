@@ -15,6 +15,7 @@ public class Beans {
    private int amount;
 
     public Beans() {
+       amount=1000;
     }
    
     public int getAmount() {
@@ -22,7 +23,7 @@ public class Beans {
     
     }
     public void setAmount(int amount) {
-        amount=1000;
+        this.amount=amount;
     }
     public void fillcoffeebeans(){                          
         setAmount(1000);
