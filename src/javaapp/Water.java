@@ -13,6 +13,7 @@ public class Water {
     int level;
 
     public Water() {
+        level =1000;
     }
 
     public int getWaterlevel(){
@@ -21,7 +22,7 @@ public class Water {
     
 
     public void setWaterlevel(int waterlevel) {
-       level =1000;
+       level =waterlevel;
     }
     public void fillwatercontainer(){
         setWaterlevel(1000);
