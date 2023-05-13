@@ -226,7 +226,7 @@ public class CoffeeMachineFame extends javax.swing.JFrame {
 
             // TODO add your handling code here:
             JOptionPane.showMessageDialog(this ,"Checking...");
-            JOptionPane.showMessageDialog(null, "Beans amount :"+c.getB().getAmount()+
+            JOptionPane.showMessageDialog(this, "Beans amount :"+c.getB().getAmount()+
                     "\nWater level :"+c.getW().getWaterlevel());
          this.logger.logInfo("Checking containers");
     }//GEN-LAST:event_checkButtonActionPerformed
