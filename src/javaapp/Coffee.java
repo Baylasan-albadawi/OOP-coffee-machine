@@ -24,7 +24,7 @@ public class  Coffee {
     private Water w= new Water();
     private String coffeetype;
     private int cupscounter;
-    private logger logger;
+    private logger logger= new logger();
 
     public Coffee(String coffeetype,Grinder grindlevel) {
         this.grindlevel = grindlevel;
