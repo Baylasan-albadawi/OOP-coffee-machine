@@ -4,8 +4,6 @@
  */
 package javaapp;
 
-import java.awt.Component;
-import javax.swing.JOptionPane;
 
 /**
  *
