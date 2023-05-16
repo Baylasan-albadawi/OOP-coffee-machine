@@ -6,7 +6,7 @@ package javaapp;
 
 /**
  *
- * @author MSI
+ * @author Baylasan
  */
 public interface Log {
    public  void log(String msg);
