@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author MSI
+ * @author Baylasan
  */
 public abstract class logger implements Log {
     
