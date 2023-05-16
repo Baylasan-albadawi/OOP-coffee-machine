@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class CoffeeMachineFame extends javax.swing.JFrame {
         Coffee c=new Coffee();
-         private logger logger;
+         private final logger logger= new loggwe() {};
         
     
 
@@ -204,7 +204,7 @@ public class CoffeeMachineFame extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Brewing "+shotsComboBox.getSelectedItem()+" of " + selectedcoffee + "...");
         if (c.getCupscounter()==10) {
             JOptionPane.showMessageDialog(this, "Please clean the water tray and waste bin.");
-            this.logger.logInfo("Making coffee");
+            this.logger.log("Making coffee");
         }
     }//GEN-LAST:event_startButtonActionPerformed
 
@@ -219,7 +219,7 @@ public class CoffeeMachineFame extends javax.swing.JFrame {
         caffienButton.addActionListener(shotsComboBox);
         int x=shotsComboBox.getSelectedIndex()+1;
         c.calculateCaffeineAndCalories(String.valueOf(cofeechoiceComboBox.getSelectedItem()), x);
-        this.logger.logInfo("Cafiene and calories calculation");
+        this.logger.log("Cafiene and calories calculation");
     }//GEN-LAST:event_caffienButtonActionPerformed
 
     private void checkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkButtonActionPerformed
@@ -228,14 +228,14 @@ public class CoffeeMachineFame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this ,"Checking...");
             JOptionPane.showMessageDialog(this, "Beans amount :"+c.getB().getAmount()+
                     "gm \nWater level :"+c.getW().getWaterlevel()+"ml");
-         this.logger.logInfo("Checking containers");
+         this.logger.log("Checking containers");
     }//GEN-LAST:event_checkButtonActionPerformed
 
     private void fillButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fillButtonActionPerformed
         // TODO add your handling code here:
         c.FillContainers();
        JOptionPane.showMessageDialog(this,"Beans Container Filled !\nWater Container Fillid !");
-       this.logger.logInfo("Filling containers");
+       this.logger.log("Filling containers");
     }//GEN-LAST:event_fillButtonActionPerformed
 
     private void shotsComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_shotsComboBoxItemStateChanged
