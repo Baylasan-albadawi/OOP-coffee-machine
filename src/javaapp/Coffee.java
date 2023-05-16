@@ -114,34 +114,26 @@ public class  Coffee {
     int MAX_WATER_CAPACITY=220;//ml
     int MAX_BEANS_CAPACITY=14;//gram
     public void makecoffee(String type,int shots) throws Exception{
-        switch (coffeetype) {
-            case "espresso":
+        if(type.equalsIgnoreCase("Espresso")){
                 waterlevel=30*shots;beans=7*shots;
                 w.setWaterlevel(level-=30*shots);
                 b.setAmount(amount-=7*shots);
                 System.out.println("Making Espresso!");
-            case "americano":
+        }
+        else {
+            if(type.equalsIgnoreCase("americano"));
                 if (shots==1) {
                     waterlevel=170;beans=7;
                     w.setWaterlevel(level-=170);
                     b.setAmount(amount-=7);
                 }
-                else
+                else{
                     waterlevel=220;beans=14;
                     w.setWaterlevel(level-=220);
                     b.setAmount(amount-=14);
                     System.out.println("Making Americano !");
-                    break;
-                default:
-                System.out.println("Invalid choice!"); 
-            }
-               cupscounter++;
-            if (waterlevel > MAX_WATER_CAPACITY || beans > MAX_BEANS_CAPACITY) {
-            throw new Exception("Volume exceeds machine capacity!");
-            
-            }
-
-    }
+                }  
+        }
     
    //for caffiene and caloreis calculation:   //for caffiene and caloreis calculation:
     private final double EspressoCaffiene = 63.6; // mg
