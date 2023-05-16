@@ -12,31 +12,22 @@ import java.util.logging.Logger;
  *
  * @author MSI
  */
-public class logger {
-
-    void logInfo(String message) {
-
-    }
-  
-    {FileInputStream fileIn;
-        ObjectInputStream in;
+public abstract class logger implements Log {
+    
+    @Override
+    public void log (String message){
         try {
-            fileIn = new FileInputStream("coffee_machine.ser");
-            in = new ObjectInputStream(fileIn);
-            in.close();
-            fileIn.close();
-            Coffee coffeeMachine = (Coffee) in.readObject();
+            FileWriter file =new FileWriter(new File(message), true);
         } catch (IOException ex) {
             Logger.getLogger(logger.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(logger.class.getName()).log(Level.SEVERE, null, ex);
-        }}
-
+        }
+    
+    }
 
     public void saveSettings() {
         try {
-            try (FileOutputStream fileOut = new FileOutputStream("coffee_machine.ser")) {
-                ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            try (FileOutputStream fileOut = new FileOutputStream("coffee_machine.ser"); 
+                    ObjectOutputStream out = new ObjectOutputStream(fileOut)) {
                 out.writeObject(this);
                 out.close();
             }
