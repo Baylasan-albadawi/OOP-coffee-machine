@@ -48,7 +48,7 @@ public class  Coffee {
     public Beans getB() {
         return b;
     }
-    private int amount;
+    private int amount=b.getAmount();
     public void setB(Beans b) {
         this.b = new Beans();
     }
@@ -94,7 +94,7 @@ public class  Coffee {
     public Water getW() {
         return w;
     }
-    private int level;
+    private int level=w.getWaterlevel();
     public void setW(Water w) {
         this.w = new Water();
     }
